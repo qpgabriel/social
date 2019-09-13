@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Social</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
+ 	<%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= javascript_include_tag 'application'%>
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Social</a>
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      	<a><%= link_to "Home", home_path %></a>
+      </li>
+    </ul> 
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      	<a><%= link_to "Create Post", new_post_path %></a>
+      </li>
+    </ul> 
+  </div>
+</nav>
+
+<%= yield %>
+</body>
+</html>
